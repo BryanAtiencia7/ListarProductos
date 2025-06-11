@@ -1,4 +1,10 @@
 # Listar
+Psra correrlo
+```
+pip install flask mysql-connector-python
+
+python .\listar_productos.p
+```
 
 ![image](https://github.com/user-attachments/assets/1f0d79b1-b988-4282-a94d-cc160350ff72)
 
