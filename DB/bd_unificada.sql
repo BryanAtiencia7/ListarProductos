@@ -4,28 +4,28 @@ USE Bd_unificada;
 
 -- Tabla: cliente
 CREATE TABLE cliente (
-    id_cliente INT NOT NULL PRIMARY KEY,
+    id_cliente INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     correo VARCHAR(100) UNIQUE
 );
 
 -- Tabla: empleado
 CREATE TABLE empleado (
-    id_empleado INT NOT NULL PRIMARY KEY,
+    id_empleado INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     rol VARCHAR(50)
 );
 
 -- Tabla: ubicacion
 CREATE TABLE ubicacion (
-    id_ubicacion INT NOT NULL PRIMARY KEY,
+    id_ubicacion INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre_estante VARCHAR(50),
     pasillo VARCHAR(50)
 );
 
 -- Tabla: producto
 CREATE TABLE producto (
-    id_producto INT NOT NULL PRIMARY KEY,
+    id_producto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     tipo VARCHAR(50),
     talla VARCHAR(20),
@@ -38,7 +38,7 @@ CREATE TABLE producto (
 
 -- Tabla: inventario
 CREATE TABLE inventario (
-    id_inventario INT NOT NULL PRIMARY KEY,
+    id_inventario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_producto INT UNIQUE,
     estado VARCHAR(50),
     FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
@@ -46,7 +46,7 @@ CREATE TABLE inventario (
 
 -- Tabla: interaccion_cliente
 CREATE TABLE interaccion_cliente (
-    id_interaccion INT NOT NULL PRIMARY KEY,
+    id_interaccion INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cliente INT,
     tipos_consulta VARCHAR(100),
     recomendacion_generada TEXT,
@@ -56,7 +56,7 @@ CREATE TABLE interaccion_cliente (
 
 -- Tabla: interaccion_empleado
 CREATE TABLE interaccion_empleado (
-    id_interaccion INT NOT NULL PRIMARY KEY,
+    id_interaccion INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_empleado INT,
     id_producto INT,
     tipo_consulta VARCHAR(100),
@@ -77,7 +77,7 @@ CREATE TABLE interaccion_cliente_producto (
 
 -- Tabla: preferencia
 CREATE TABLE preferencia (
-    id_preferencia INT NOT NULL PRIMARY KEY,
+    id_preferencia INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     id_cliente INT,
     tipo_producto VARCHAR(50),
     color_preferido VARCHAR(30),

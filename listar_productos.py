@@ -7,7 +7,7 @@ app = Flask(__name__)
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'C#L#ST#ybl4nco',
+    'password': 'root',
     'database': 'bd_unificada'
 }
 
