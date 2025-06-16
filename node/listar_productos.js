@@ -6,8 +6,8 @@ const app = express();
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'C#L#ST#ybl4nco',
-  database: 'bd_unificada_test'
+  password: 'root',
+  database: 'bd_unificada'
 });
 
 // Conectar a la base de datos
